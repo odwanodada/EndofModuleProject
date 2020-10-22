@@ -1,3 +1,4 @@
+/*Navbar */
 ul {
       list-style-type: none;
       margin: 0;
@@ -26,36 +27,49 @@ li a:hover:not(.active) {
       background-color: orange;
 }
 
-.flex-container {
-      display: flex;
-      flex-wrap: wrap;
+/*Navbar end*/
+body {
+      font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+      margin: 12px 0;
 }
 
-.flex-container>div {
+.card-container {
+      cursor: pointer;
+      height: 300px;
+      perspective: 600;
+      position: relative;
       width: 400px;
-      height: 400px;
-      margin: 10px;
-      margin-left: 40px;
-      text-align: center;
-      line-height: 75px;
-      font-size: 30px;
-      text-align: center;
-      border-radius: 48px;
-      background: linear-gradient(145deg, #5bc6ff, #4da7db);
-      box-shadow: 5px 5px 10px #4494c2,
-            -5px -5px 10px #66deff;
-      transition: all .3s linear;
 }
 
-.card1:hover{
+.card {
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: all 1s ease-in-out;
+      width: 100%;
+}
+
+.card:hover {
       transform: rotateY(180deg);
 }
 
-.card1>img {
-      width: 65%;
-      height: 65%;
-      border-radius: 50%;
+.card .side {
+      backface-visibility: hidden;
+      border-radius: 6px;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      width: 100%;
 }
+
+.card .back {
+      background: #eaeaed;
+      color: #0087cc;
+      line-height: 150px;
+      text-align: center;
+      transform: rotateY(180deg);
+}
+
 
 
 .logo>img {
