@@ -19,6 +19,34 @@
             float: left;
         }
 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 17px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: orange;
+        }
+
+        .active {
+            background-color: orange;
+        }
+
         li a {
             display: block;
             color: white;
@@ -42,14 +70,14 @@
             color: #485e74;
         }
 
-        .faq {
+        .about {
             text-align: center;
             font-weight: 300;
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
 
-        .faq span {
+        .about span {
             color: #ffffff;
         }
 
@@ -78,14 +106,15 @@
 
 <body>
 
-    <ul>
+    <ul id="navbar">
         <li><a href="index.html">Home</a></li>
-        <li><a href="/aboutUs.html">aboutUs</a></li>
-        <li><a href="/Contact.html">Contact</a></li>
-        <li><a href="#FaQ"></a></li>
-    </ul>
+        <li><a href="aboutUs.html">AboutUs</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    
 
-    <h1 class="faq"><span>SunOfTheSoil</span></h1>
+    <h1 class="about"><span>SunOfTheSoil</span></h1>
 
     <h2 class="logo">
 

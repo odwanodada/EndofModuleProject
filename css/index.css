@@ -28,6 +28,25 @@ li a:hover:not(.active) {
 }
 
 
+.index {
+      text-align: center;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+}
+
+.index span {
+      color: #ffffff;
+}
+
+.para {
+      text-align: center;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+}
+
+
 
 .flex-container {
       display: flex;
@@ -117,12 +136,12 @@ body {
 }
 
 .modal-radio {
-      position: absolute;
+      display: none;
       visibility: hidden;
       opacity: 0;
 }
 
-.modal {
+.modal,.j {
       position: fixed;
       height: 100%;
       width: 100%;
@@ -134,24 +153,24 @@ body {
       transition: opacity .5s, transform .5s;
 }
 
-#modal-open:checked+.modal {
+#modal-open:checked+.modal,:checked+.j{
       opacity: 1;
       transform: scale(1);
 }
 
 .overlay {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      width: 10px;
+      height: 10px;
+      /* background: rgba(0, 0, 0, 0.5); */
       top: 0;
       left: 0;
 }
 
-.modal {
+.modal,.j {
       position: absolute;
-      width: 70%;
-      height: 300px;
+      width: 30%;
+      height: 30%;
       max-height: 70%;
       top: 10%;
       left: 15%;
@@ -189,3 +208,4 @@ body {
 .close-btn:before {
       transform: rotate(-45deg);
 }
+
