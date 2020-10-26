@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>  
+        /*Navbar */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 17px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 17px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: orange;
+        }
+
+        .active {
+            background-color: orange;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: orange;
+        }
+
+        .active {
+            background-color: orange;
+        }
+
+        /*Navbar end*/
+
+        body {
+            background: #3952a3;
+            color: #485e74;
+        }
+
+        .faq {
+            text-align: center;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .faq span {
+            color: #ffffff;
+        }
+
+        .para {
+            text-align: center;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .para span {
+            color: #ffffff;
+        }
+
+        .logo>img {
+            width: 13%;
+            height: 13%;
+            border-radius: 8%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+
+
+        .faq-heading {
+            font-family: Lato;
+            font-weight: 400;
+            font-size: 19px;
+            -webkit-transition: text-indent 0.2s;
+            text-indent: 20px;
+            color: #333;
+        }
+
+        .faq-text {
+            font-family: Open Sans;
+            font-weight: 400;
+            color: #919191;
+            width: 95%;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .faq {
+            width: 1000px;
+            margin: 0 auto;
+          
+            border-radius: 4px;
+            position: relative;
+            
+        }
+
+        .faq label {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            height: 56px;
+            padding-top: 1px;
+
+            background-color: #FAFAFA;
+            border-bottom: 1px solid #E1E1E1;
+        }
+
+        .faq input[type="checkbox"] {
+            display: none;
+        }
+
+        .faq .faq-arrow {
+            width: 5px;
+            height: 5px;
+            transition: -webkit-transform 0.8s;
+            transition: transform 0.8s;
+            transition: transform 0.8s, -webkit-transform 0.8s;
+            -webkit-transition-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-top: 2px solid rgba(0, 0, 0, 0.33);
+            border-right: 2px solid rgba(0, 0, 0, 0.33);
+            float: right;
+            position: relative;
+            top: -30px;
+            right: 27px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .faq input[type="checkbox"]:checked+label>.faq-arrow {
+            transition: -webkit-transform 0.8s;
+            transition: transform 0.8s;
+            transition: transform 0.8s, -webkit-transform 0.8s;
+            -webkit-transition-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        .faq input[type="checkbox"]:checked+label {
+            display: block;
+            background: rgba(255, 255, 255, 255) !important;
+            color: #4f7351;
+            height: 225px;
+            transition: height 0.8s;
+            -webkit-transition-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .faq input[type='checkbox']:not(:checked)+label {
+            display: block;
+            transition: height 0.8s;
+            height: 60px;
+            -webkit-transition-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutUs.html">AboutUs</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+    </ul>
+
+
+    <h1 class="faq"><span>SunOfTheSoil</span></h1>
+
+    <h2 class="logo">
+
+        <img src="/home/user/Desktop/HTML/cards/images/logo.jpeg" alt=d esk />
+
+    </h2>
+
+
+
+
+    <div class='faq'>
+        <input id='faq-a' type='checkbox'>
+        <label for='faq-a'>
+            <p class="faq-heading">What is SunOfTheSoil Cocktails?</p>
+            <div class='faq-arrow'></div>
+            <p class="faq-text">SunOfTheSoil Cocktails is a shared database of cocktail recipes. <br>
+                After you sign up, you can build a Cocktail Book composed of your own recipes <br>
+                and/or those that others have shared. Casual users may search for and use recipes<br>
+                without creating an account.</p>
+        </label>
+        <input id='faq-b' type='checkbox'>
+        <label for='faq-b'>
+            <p class="faq-heading">How does SunOfTheSoil Cocktails make money?</p>
+            <div class='faq-arrow'></div>
+            <p class="faq-text">Sponsors and advertisers pay to place their advertisements before you.<br>
+                 Because SunOfTheSoil Cocktails knows what the ingredients are, it can do a good job of placing,<br>
+                 advertisements that are likely to be interesting. In the future, there may be some paid<br>
+                 premium services for user and retailers.</p>
+        </label>
+        <input id='faq-c' type='checkbox'>
+        <label for='faq-c'>
+            <p class="faq-heading">Is Kindred Cocktails for me?</p>
+            <div class='faq-arrow'></div>
+            <p class="faq-text"></p>If you share our love of craft cocktails and you ...
+
+                are exploring the craft cocktail world and are looking for high-quality cocktail recipes,<br>
+                are a cocktail enthusiast with an existing collection of cocktails, or<br>
+                are a cocktail professional looking for inspiration and a strong organizational tool ...<br>
+            </p>
+        </label>
+        <input id='faq-d' type='checkbox'>
+        <label for='faq-d'>
+            <p class="faq-heading">Is it free?</p>
+            <div class='faq-arrow'></div>
+            <p class="faq-text"> Yes. At some point there may be a premium account with advanced features,<br>
+                 but a basic account will remain free. </p>
+        </label>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

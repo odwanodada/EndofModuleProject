@@ -141,7 +141,8 @@ body {
       opacity: 0;
 }
 
-.modal,.j {
+.modal,
+.j {
       position: fixed;
       height: 100%;
       width: 100%;
@@ -153,7 +154,8 @@ body {
       transition: opacity .5s, transform .5s;
 }
 
-#modal-open:checked+.modal,:checked+.j{
+#modal-open:checked+.modal,
+:checked+.j {
       opacity: 1;
       transform: scale(1);
 }
@@ -167,7 +169,8 @@ body {
       left: 0;
 }
 
-.modal,.j {
+.modal,
+.j {
       position: absolute;
       width: 30%;
       height: 30%;
@@ -208,4 +211,3 @@ body {
 .close-btn:before {
       transform: rotate(-45deg);
 }
-
