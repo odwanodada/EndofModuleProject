@@ -123,91 +123,67 @@ body {
       padding: 20px;
 }
 
-.modal-open {
-      display: inline-block;
-      border-radius: 10px;
-      background: #4caf50;
-      padding: 5px 15px;
-      color: #fff;
-}
 
-.modal-label {
-      position: relative;
-}
 
-.modal-radio {
-      display: none;
+.modal {
+      position: absolute;
+      /* hide it */
+      opacity: 0;
       visibility: hidden;
-      opacity: 0;
-}
-
-.modal,
-.j {
-      position: fixed;
-      height: 100%;
-      width: 100%;
       top: 0;
+      bottom: 0;
       left: 0;
-      overflow: hidden;
-      opacity: 0;
-      transform: scale(0);
-      transition: opacity .5s, transform .5s;
+      right: 0;
+      /* background: rgba(0, 0, 0, 0.7); */
+      transition: opacity 500ms;
+      visibility: hidden;
+      z-index: 1;
 }
 
-#modal-open:checked+.modal,
-:checked+.j {
+.modal:target {
+      /* show it */
+      visibility: visible;
       opacity: 1;
-      transform: scale(1);
 }
 
-.overlay {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      /* background: rgba(0, 0, 0, 0.5); */
-      top: 0;
-      left: 0;
-}
-
-.modal,
-.j {
-      position: absolute;
-      width: 30%;
-      height: 30%;
-      max-height: 70%;
-      top: 10%;
-      left: 15%;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 3px 15px -2px #222;
+.content {
+      text-align: center;
+      margin: 70px auto;
       padding: 20px;
+      background: rgb(107, 105, 231);
+      color: #000000;
+      border-radius: 5px;
+      width: 30%;
+      position: relative;
+      transition: all 5s ease-in-out;
+      position: relative;
+      margin: 0 auto;
+      top: 35%;
 }
 
-.close-btn {
+.pop-head {
+      font-size: 42px;
+      line-height: 2;
+      letter-spacing: 0.022em;
+      font-weight: 600;
+      font-style: normal;
+}
+
+.closebtn {
       position: absolute;
-      width: 30px;
-      height: 30px;
-      top: 10px;
-      right: 20px;
-      border-radius: 50%;
-      border: 2px solid #f44336;
-      cursor: pointer;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
 }
 
-.close-btn:after,
-.close-btn:before {
-      content: "";
-      position: absolute;
-      width: 70%;
-      height: 2px;
-      background: #f44336;
-      left: 15%;
-      top: 50%;
-      top: calc(50% - 1px);
-      transform-origin: 50% 50%;
-      transform: rotate(45deg);
+.closebtn:hover {
+      color: white;
 }
 
-.close-btn:before {
-      transform: rotate(-45deg);
+.modal .content ul{
+  background: rgb(107, 105, 231);
 }
