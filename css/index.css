@@ -184,6 +184,19 @@ body {
       color: white;
 }
 
-.modal .content ul{
-  background: rgb(107, 105, 231);
+.modal .content ul {
+      background: rgb(107, 105, 231);
+}
+
+@media (min-width: 40rem) {
+      .card1 {
+            width: 50%;
+      }
+}
+
+
+@media (min-width: 56rem) {
+      .card1 {
+            width: 33.3333%;
+      }
 }
