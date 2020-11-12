@@ -2,180 +2,429 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=">
-  <title>Cards</title>
-  <link href="css/index.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 17px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: orange;
+        }
+
+        .active {
+            background-color: orange;
+        }
+
+
+
+
+        .card1>img {
+            width: 80%;
+            height: 80%;
+            border-radius: 60%;
+        }
+
+        .card1>img {
+            width: 80%;
+            height: 80%;
+            border-radius: 60%;
+        }
+
+
+        .logo>img {
+            width: 13%;
+            height: 13%;
+            border-radius: 8%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .logo>img {
+            width: 13%;
+            height: 13%;
+            border-radius: 8%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+
+        body {
+            /* background-color: purple;  */
+            background: #3952a3;
+            color: #485e74;
+
+            margin: 0;
+            /* Full height */
+            /* height: 100%;  */
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+
+        .index {
+            text-align: center;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .index span {
+            color: #ffffff;
+        }
+
+
+
+
+
+
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+
+        }
+
+        .container .card {
+            position: relative;
+            min-width: 320px;
+            height: 400px;
+            border-radius: 50px;
+            background: #55b9f3;
+            box-shadow: inset 20px 20px 59px #489dcf,
+                inset -20px -20px 59px #62d5ff;
+
+            border-radius: 15px;
+            margin: 30px;
+        }
+
+        .container .card .box {
+            position: absolute;
+            background: blanchedalmond;
+            border: 2px solid black;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+
+        }
+
+        .container .card .box:hover {
+            transform: translateY(-50px);
+            box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+
+
+        }
+
+        .container .card .box:hover.content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container .card .box:hover.content h2 {
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            font-size: 8em;
+
+        }
+
+        .content>img {
+            width: 250px;
+            height: 250px;
+            border-radius: 300px;
+            position: relative;
+            top: 50px;
+            left: 40px;
+
+        }
+
+
+
+        .modal {
+            position: absolute;
+            /* hide it */
+            opacity: 0;
+            visibility: hidden;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* background: rgba(0, 0, 0, 0.7); */
+            transition: opacity 500ms;
+            visibility: hidden;
+            z-index: 1;
+        }
+
+        .modal:target {
+            /* show it */
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modalcontent {
+            text-align: center;
+            margin: 70px auto;
+            padding: 20px;
+            background: rgb(107, 105, 231);
+            color: yellow;
+            border-radius: 5px;
+            /* width: 30%; */
+            position: relative;
+            transition: all 5s ease-in-out;
+            position: relative;
+            margin: 0 auto;
+            /* top: 35%; */
+            height: 300px;
+        }
+
+        .pop-head {
+            font-size: 42px;
+            line-height: 2;
+            letter-spacing: 0.022em;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: yellow;
+        }
+
+        .closebtn:hover {
+            color: white;
+        }
+
+        .modal .content ul {
+            background: rgb(107, 105, 231);
+        }
+
+     
+    </style>
 </head>
 
 <body>
 
-  <ul id="navbar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="aboutUs.html">AboutUs</a></li>
-    <li><a href="Contact.html">Contact</a></li>
-    <li><a href="FAQ.html">FAQ</a></li>
-  </ul>
+    <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutUs.html">AboutUs</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+    </ul>
 
 
 
-  <h1 class="index"><span>SunOfthesoil</span></h1>
+    <h1 class="index"><span>SunOfthesoil</span></h1>
 
-  <h2 class="logo">
+    <h2 class="logo">
 
-    <img src="images/logo.jpeg"/>
+        <img src="images/logo.jpeg" />
 
-  </h2>
-
-  <div class="flex-container">
-
-    <div class="card1">
-
-
-      <img src="images/Tequilasunrise.jpeg" >
-
-      <div class="card-body">
-
-        <a href="#third" class="btn">Read more</a>
-        <!--change the id name only-->
-      </div>
-
-      <div id="third" class="modal">
-        <!--put the id th name -->
-        <div class="content">
-          <a class="closebtn" href="#">X</a>
-          <h5>The African Sunrise</h5>
-
-          <ul>
-            <li>200ml Kenyan or Ethiopian coffee, hot)</li>
-            <li>120ml citrus vodka</li>
-            <li>60ml sparkling water</li>
-            <li>30ml simple syrup</li>
-            <li>Ice cubes</li>
-          </ul>
+    </h2>
 
 
 
 
+
+
+
+
+
+    <div class="container">
+        <div class="card">
+            <div class="content">
+
+                <img src="images/Tequilasunrise.jpeg">
+
+
+                <div class="card-body">
+
+                    <a href="#num1" class="btn">Read more</a>
+                    <!--change the id name only-->
+                </div>
+
+                <div id="num1" class="modal">
+                    <!--put the id th name -->
+                    <div class="modalcontent">
+                        <a class="closebtn" href="#">X</a>
+                        <h3>Basilicious</h3>
+
+                        <ol>
+                            <li>50 ml vodka</li>
+                            <li>Juice of 1 lime20 ml simple syrup (sugar water)</li>
+                            <li> 4 basil leaves (keep one aside for garnish) </li>
+                            <li>Small pinch of Robertsons Barbecue Spice </li>
+                            <li>Ice cubes</li>
+                        </ol>
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
         </div>
-      </div>
+
+
+        <div class="card">
+            <div class="content">
+
+
+                <img src="images/galaxycocktail.jpg" />
+
+
+
+                <div class="card-body">
+
+                    <a href="#third" class="btn">Read more</a>
+                    <!--change the id name only-->
+                </div>
+
+                <div id="third" class="modal">
+                    <!--put the id th name -->
+                    <div class="modalcontent">
+                        <a class="closebtn" href="#">X</a>
+                        <h4>Nigerian Chapman</h4>
+
+                        <ol>
+                            <li>½ cup Grenadine Syrup</li>
+                            <li>2 tablespoons of Angostura Aromatic Bitters</li>
+                            <li>350ml Fanta Orange</li>
+                            <li>350ml Sprite</li>
+                            <li>Sliced oranges, cucumbers and apples</li>
+                        </ol>
 
 
 
 
+                    </div>
+                </div>
 
 
 
 
-    </div>
-
-    <div class="card1">
-      <img src="images/galaxycocktail.jpg" />
-
-
-
-      <div class="card-body">
-
-        <a href="#third" class="btn">Read more</a>
-        <!--change the id name only-->
-      </div>
-
-      <div id="third" class="modal">
-        <!--put the id th name -->
-        <div class="content">
-          <a class="closebtn" href="#">X</a>
-          <h4>Nigerian Chapman</h4>
-
-          <ul>
-            <li>½ cup Grenadine Syrup</li>
-            <li>2 tablespoons of Angostura Aromatic Bitters</li>
-            <li>350ml Fanta Orange</li>
-            <li>350ml Sprite</li>
-            <li>Sliced oranges, cucumbers and apples</li>
-          </ul>
-
-
-
-
+            </div>
         </div>
-      </div>
+
+
+        <div class="card">
+            <div class="content">
+
+
+                <img src="images/cocktail.png" />
 
 
 
-    </div>
+                <div class="card-body">
+
+                    <a href="#number1" class="btn">Read more</a>
+                    <!--change the id name only-->
+                </div>
+
+                <div id="number1" class="modal">
+                    <!--put the id th name -->
+                    <div class="modalcontent">
+                        <a class="closebtn" href="#">X</a>
+                        <h2>Dawa</h2>
+
+
+                        <ol>
+                            <li>teaspoon sugar or 1 tablespoon brown sugar</li>
+                            <li>fluid ounces vodka</li>
+                            <li>crushed ice cube</li>
+                            <li> whole lime, quarter with skin on </li>
+                            <li>dawa stick, twisted in creamed honey </li>
+                        </ol>
 
 
 
-
-
-    <div class="card1">
-      <img src="images/africa.jpeg" />
-
-
-      <div class="card-body">
-
-        <a href="#num2" class="btn">Read more</a>
-        <!--change the id name only-->
-      </div>
-
-      <div id="num2" class="modal">
-        <!--put the id th name -->
-        <div class="content">
-          <a class="closebtn" href="#">X</a>
-          <h3>Basilicious</h3>
-
-          <ul>
-            <li>50 ml vodka</li>
-            <li>Juice of 1 lime20 ml simple syrup (sugar water)</li>
-            <li> 4 basil leaves (keep one aside for garnish) </li>
-            <li>Small pinch of Robertsons Barbecue Spice </li>
-            <li>Ice cubes</li>
-          </ul>
+                    </div>
 
 
 
-
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+
+
+        <div class="card">
+            <div class="content">
+
+
+                <img src="images/Tequilasunrise.jpeg">
+
+                <div class="card-body">
+
+                    <a href="#four" class="btn">Read more</a>
+                    <!--change the id name only-->
+                </div>
+
+                <div id="four" class="modal">
+                    <!--put the id th name -->
+                    <div class="modalcontent">
+                        <a class="closebtn" href="#">X</a>
+                        <h5>The African Sunrise</h5>
+
+                        <ol>
+                            <li>200ml Kenyan or Ethiopian coffee, hot)</li>
+                            <li>120ml citrus vodka</li>
+                            <li>60ml sparkling water</li>
+                            <li>30ml simple syrup</li>
+                            <li>Ice cubes</li>
+                        </ol>
 
 
 
-    <div class="card1">
-      <img src="images/cocktail.png" />
+
+                    </div>
+                </div>
 
 
 
-      <div class="card-body">
-
-        <a href="#number1" class="btn">Read more</a>
-        <!--change the id name only-->
-      </div>
-
-      <div id="number1" class="modal">
-        <!--put the id th name -->
-        <div class="content">
-          <a class="closebtn" href="#">X</a>
-          <h2>Dawa</h2>
-
-
-          <ul>
-            <li>teaspoon sugar or 1 tablespoon brown sugar</li>
-            <li>fluid ounces vodka</li>
-            <li>crushed ice cube</li>
-            <li> whole lime, quarter with skin on </li>
-            <li>dawa stick, twisted in creamed honey </li>
-          </ul>
-
-
-
+            </div>
         </div>
-      </div>
     </div>
-
-
-
-  </div>
 
 </body>
 
