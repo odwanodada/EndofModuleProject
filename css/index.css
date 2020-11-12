@@ -72,9 +72,9 @@ li a:hover:not(.active) {
 
 
 .card1>img {
-      width: 65%;
-      height: 65%;
-      border-radius: 50%;
+      width: 80%;
+      height: 80%;
+      border-radius: 60%;
 }
 
 
@@ -188,11 +188,17 @@ body {
       background: rgb(107, 105, 231);
 }
 
-@media screen and (max-width: 600px){
-      .card1 {
-            width: 100%;
-            height: auto;
-
+@media (max-width: 1024px) {
+      .flex-container .card1 {
+            width: 40%;
+            
       }
 }
 
+@media (max-width: 768px) {
+
+      .flex-container .card1{
+            width: 50%;
+      }
+
+}
